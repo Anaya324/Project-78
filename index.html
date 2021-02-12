@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <title>
+        Project 78
+    </title>
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        #heading {
+            color: rgb(0, 0, 0);
+            font-family: cursive;
+            text-decoration-line: underline;
+            text-decoration-style: dashed;
+            text-decoration-color: rgb(118, 255, 232);
+        }
+
+        #image {
+            height: 450px;
+            width: 400px;
+            border-radius: 10%;
+            border-style: double;
+            border-width: 5px;
+        }
+
+        #name {
+            color: blueviolet;
+            font-weight: bold;
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1 id="heading">THE FAMILY BOOK</h1>
+
+    <img id="image" src="https://images-na.ssl-images-amazon.com/images/I/91zbi9M+mKL.jpg">
+
+    <h4 id="name"></h4>
+
+    <span>
+        <button id="btnNext" onclick="next()">
+            <h7>NEXT</h7>
+        </button>
+    </span>
+
+
+    <script>
+        var members = [
+            "https://images-na.ssl-images-amazon.com/images/I/91zbi9M+mKL.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0uCXTiYwlYQOLAEO8hZxiL-mHtLrsT-1hxw&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ7QeOYs-Y1lluSnRNKzAcAnIIJa0SqyAy5A&usqp=CAU",
+            "https://thumbs.dreamstime.com/b/kerala-indian-woman-cute-134899838.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_IFi11OzM2GUZGKwLzt5-NYz1bw6RFD4ifg&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUqFkrH2h9yqd2xaljrwMbu_iMbfqHFw_KEw&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREBKFruvUOAANiVyvGlQjUc86Nv2XMUSW61Q&usqp=CAU",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW1ergdfivd4BZlJvE9-XyyWvZsnwXuAxoQg&usqp=CAU"
+        ];
+        var names = [
+            "Welcome!",
+            "Yashil Shah",
+            "Anaya Shah",
+            "Hiral Shah",
+            "Gaurang Shah",
+            "Vinod Shah",
+            "Ramesh Shah",
+            "That's All!"
+        ];
+        var i = 0;
+        function next() {
+            //i++;
+            if (i > 7) {
+                i = 0;
+            };
+            document.getElementById("name").innerHTML = names[i];
+            document.getElementById("image").src = members[i];i++;
+        };
+
+    </script>
+</body>
+
+</html>
